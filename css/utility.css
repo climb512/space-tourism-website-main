@@ -1,0 +1,54 @@
+/* ------------------------- */
+/* Utility classes           */
+/* ------------------------- */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem); 
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+    outline: 1px solid red;
+}
+
+.d-block {
+    display: block;
+}
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: no-wrap;
+    border: 0;
+}
+
+/* ------------------------- */
+/* Components                */
+/* ------------------------- */
+
+.large-glow-button {
+    display: inline-grid;
+    place-items: center;
+    padding: 0 2em;
+    width: min-content;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    text-decoration: none;
+}
