@@ -141,7 +141,7 @@ body {
 img,
 picture {
     max-width: 100%;
-    display: block;
+    /* display: block; */ /* breaks my image hiding... what's up? */
 }
 
 /* make form elements easier to work with */

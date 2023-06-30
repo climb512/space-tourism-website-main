@@ -223,6 +223,7 @@
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+    background-color: transparent;
 }
 
 .underline-indicators > *:hover,
@@ -269,6 +270,12 @@ body {
 .home {
     background-image: url(../assets/home/background-home-mobile.jpg);
 }
+.destination {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+}
+.crew {
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+}
 
 @media (min-width: 35rem) {
     .home {
@@ -279,6 +286,9 @@ body {
         background-position: center center;
         background-image: url(../assets/destination/background-destination-tablet.jpg);
     }
+    .crew {
+        background-image: url(../assets/crew/background-crew-tablet.jpg);
+    }
 }
 
 @media (min-width: 45rem) {
@@ -288,6 +298,9 @@ body {
     }
     .destination {
         background-image: url(../assets/destination/background-destination-desktop.jpg);
+    }
+    .crew {
+        background-image: url(../assets/crew/background-crew-desktop.jpg);
     }
 } 
 
@@ -315,10 +328,6 @@ body {
 
 /* destination layout */
 
-.destination {
-    background-image: url(../assets/destination/background-destination-mobile.jpg);
-}
-
 .grid-container--destination {
     --flow-space: 2rem;
     grid-template-areas: 
@@ -328,9 +337,10 @@ body {
         'content';
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
     grid-area: image;
     max-width: 60%;
+    align-self: start;
 }
 
 .grid-container--destination > .tab-list {
@@ -362,10 +372,6 @@ body {
         'first'
         'second'
         'third';
-}
-
-.crew {
-    background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
 
 .grid-container--crew > img {
@@ -421,7 +427,6 @@ body {
     .grid-container--crew > .crew-details {
         grid-area: first;
         padding-top: 2rem;
-        margin: 0 4rem;
     }
 }
 
@@ -452,7 +457,7 @@ body {
             '. image content .';
     }
 
-    .grid-container--destination > img {
+    .grid-container--destination > picture {
         max-width: 90%;
     }
 
@@ -471,17 +476,17 @@ body {
     .grid-container--crew > img {
         grid-area: image;
         max-width: 100%;
-        
+        align-self: end;
     }
     
     .grid-container--crew > .dot-indicators {
         grid-area: dots;
+        justify-self: start;
     }
     
     .grid-container--crew > .crew-details {
         grid-area: content;
         padding-top: 2rem;
-        margin: 0 4rem;
     }
 
 }
