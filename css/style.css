@@ -299,12 +299,13 @@ body {
 .grid-container {
     text-align: center;
     display: grid;
+    gap: 1rem;
     place-items: center;
     padding-inline: 1rem;
     padding-bottom: 4rem;
 }
 
-.grid-container * {
+.grid-container p:not([class]) {
     max-width: 50ch;
 }
 
@@ -345,11 +346,52 @@ body {
     border-top: 1px solid hsl( var(--clr-white) / .1);
     padding-top: 2.5rem;
     margin-top: 2.5rem;
+    white-space: nowrap; 
 }
 
 .destination-meta p {
     font-size: 1.75rem;
 }
+
+/* crew layout */
+
+.grid-container--crew {
+    --flow-space: 2rem;
+    grid-template-areas: 
+        'title'
+        'first'
+        'second'
+        'third';
+}
+
+.crew {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+}
+
+.grid-container--crew > img {
+    grid-area: first;
+    max-width: 60%;
+}
+
+.grid-container--crew > .dot-indicators {
+    grid-area: second;
+}
+
+.grid-container--crew > .crew-details {
+    grid-area: third;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.crew-text {
+    color: hsl(var(--clr-light));
+}
+
+.grid-container--crew h2 {
+    color: hsl(var(--clr-gray));
+}
+
+
 
 @media (min-width: 35em) {
     .numbered-title {
@@ -361,13 +403,33 @@ body {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    .grid-container--crew {
+        padding-bottom: 0;
+    }
+
+    .grid-container--crew > img {
+        grid-area: third;
+        max-width: 60%;
+        
+    }
+    
+    .grid-container--crew > .dot-indicators {
+        grid-area: second;
+    }
+    
+    .grid-container--crew > .crew-details {
+        grid-area: first;
+        padding-top: 2rem;
+        margin: 0 4rem;
+    }
 }
 
 @media (min-width: 45em) {
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 45rem)) minmax(1rem, 1fr);
     }
         
     .grid-container--home {
@@ -397,6 +459,29 @@ body {
     .destination-meta {
         --gap: 6rem;
         justify-content: start;
+    }
+
+    .grid-container--crew {
+        grid-template-areas: 
+            '. title   image .'
+            '. content image .'
+            '. dots    image .';
+    }
+
+    .grid-container--crew > img {
+        grid-area: image;
+        max-width: 100%;
+        
+    }
+    
+    .grid-container--crew > .dot-indicators {
+        grid-area: dots;
+    }
+    
+    .grid-container--crew > .crew-details {
+        grid-area: content;
+        padding-top: 2rem;
+        margin: 0 4rem;
     }
 
 }

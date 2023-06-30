@@ -14,7 +14,6 @@
 
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
-    outline: 1px solid red;
 }
 
 .d-block {
@@ -49,6 +48,7 @@
     --clr-dark: 230 35% 7%;
     --clr-light: 231 77% 90%;
     --clr-white: 0 0% 100%;
+    --clr-gray:  0, 0%, 65%;
     
     /* font-sizes */
     --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
