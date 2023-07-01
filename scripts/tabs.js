@@ -37,7 +37,13 @@ function changeTabFocus(e) {
 
 
 function changeTabPanel(e) {
-    const targetTab = e.target;
+    let targetTab = e.target;
+
+    // on technology.html the e.target will be the <span>, not the parent <button>
+    if ( ! targetTab.getAttribute("aria-controls")) {
+        targetTab = targetTab.parentNode;
+    }
+    console.log(targetTab); 
     const targetPanel = targetTab.getAttribute("aria-controls");
     const targetImage = targetTab.getAttribute("data-image");
     
@@ -62,5 +68,4 @@ function changeTabPanel(e) {
         
     mainContainer.querySelector([`#${targetImage}`]).removeAttribute('hidden');
     
-    // console.log(mainContainer);
 }

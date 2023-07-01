@@ -43,7 +43,7 @@
       </ul>
     </nav>
   </header>
-  <main id="main" class="grid-container grid-container--crew flow">
+  <main id="main"  class="grid-container grid-container--crew flow">
     <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
 
     <picture id="commander-image">

@@ -38,6 +38,7 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
+/* BEWARE how this will affect the 'hidden' attribute in html */
 img,
 picture,
 svg {
