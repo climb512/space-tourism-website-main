@@ -588,7 +588,7 @@ body {
     .grid-container--technology {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(1rem, 1fr) minmax(2rem, 1fr) repeat(2, minmax(0, 45rem));
+        grid-template-columns: minmax(1rem, 1fr) 5rem repeat(2, minmax(0, 45rem));
     }
 
     .grid-container--technology {
@@ -598,7 +598,7 @@ body {
             ' . dots content image ';
     }
 
-    .grid-container--technology > picture, .grid-container--technology  img  {
+    .grid-container--technology > picture, .grid-container--technology img  {
         grid-area: image;
         height:max-content;
         align-self: end;
@@ -606,9 +606,14 @@ body {
     
     .grid-container--technology > .number-indicators {
         grid-area: dots;
-        justify-self: start;
         display: flex;
+        align-self:center;
+        gap: 2rem;
         flex-direction: column;
+    }
+    
+    .grid-container--technology > .number-indicators > * {
+        font-size: 2rem;
     }
     
     .grid-container--technology > .technology-details {
