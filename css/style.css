@@ -593,14 +593,14 @@ body {
 
     .grid-container--technology {
         grid-template-areas: 
-            ' . title title  image '
+            ' . title title  . '
             ' . dots content image '
             ' . dots content image ';
     }
 
     .grid-container--technology > picture, .grid-container--technology img  {
         grid-area: image;
-        height:max-content;
+        height: 500px;
         align-self: end;
     }
     
