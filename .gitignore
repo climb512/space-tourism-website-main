@@ -16,3 +16,11 @@ space-tourism-website-figma/*
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
+
+# extra images
+assets/destination/image-moon2.png
+assets/destination/image-moon2.psd
+assets/destination/image-moonFull2.png
+assets/destination/shadow.png
+assets/destination/shadow.psd
+assets/destination/shadow2.png

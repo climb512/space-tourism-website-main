@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box {
+            width: 445px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-image: url(./assets/destination/image-earthFull.png);
+            background-size: cover;
+            z-index: 0;
+        }
+
+        .shadow {
+            position: absolute;
+            width: 445px;
+            aspect-ratio: 1;
+            background: url(assets/destination/shadow3.png);
+        }
+
+        .rotate {
+            animation: rotate 60s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box rotate"></div>
+        <div class="shadow"></div>  
+    </div>
+</body>
+
+</html>
